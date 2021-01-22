@@ -58,6 +58,11 @@ class User extends Authenticatable
     
     public function grupos()
     {
-        return $this->belongsTo(Grupo::class);
+        return $this->belongsTo(Grupo::class)->withTimesStamp();
+    }
+
+    public function location()
+    {
+        return $this->hasOneThrough(Location::class, Perfil::class);
     }
 }

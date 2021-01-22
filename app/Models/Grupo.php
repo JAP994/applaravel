@@ -10,6 +10,6 @@ class Grupo extends Model
     use HasFactory;
     public function users()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class)->withTimestamp();
     }
 }
