@@ -50,8 +50,14 @@ class User extends Authenticatable
     {
         return $this->hasMany(Perfil::class);
     }
+
     public function level()
     {
         return $this->belongsTo(Level::class);
+    }
+    
+    public function grupos()
+    {
+        return $this->belongsTo(Grupo::class);
     }
 }
