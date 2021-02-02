@@ -14,10 +14,10 @@ class AgregarLlaveUsuariosperfilesToPerfilsTable extends Migration
     public function up()
     {
         Schema::table('perfils', function (Blueprint $table) {
-            $table->bigInteger('user_id')->after('id');
+            $table->bigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')
                 ->onDelete('cascade')
-                ->onUpdate('cascade')->after('descripcion');
+                ->onUpdate('cascade');
         });
     }
 

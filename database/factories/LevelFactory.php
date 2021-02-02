@@ -22,7 +22,9 @@ class LevelFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'nombre' => $this->faker->name,
+            'descripcion' => $this->faker->name,
+            
         ];
     }
 }
