@@ -22,7 +22,7 @@ class LocationFactory extends Factory
     public function definition()
     {
         return [
-            'country' => $this->faker->name,
+            'country' => $this->faker->country,
             'perfil_id' => 1,
         ];
     }

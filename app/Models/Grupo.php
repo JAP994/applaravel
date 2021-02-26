@@ -8,8 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Grupo extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'nombre'
+    ];
     public function users()
     {
-        return $this->belongsTo(User::class)->withTimestamp();
+        return $this->belongsToMany(User::class);
     }
 }

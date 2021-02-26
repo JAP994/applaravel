@@ -19,7 +19,11 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'email_verified_at',
         'password',
+        'avatar',
+        'remember_token',
+        'level_id'
     ];
 
     /**
@@ -58,7 +62,7 @@ class User extends Authenticatable
     
     public function grupos()
     {
-        return $this->belongsTo(Grupo::class)->withTimesStamp();
+        return $this->belongsToMany(Grupo::class);
     }
 
     public function location()

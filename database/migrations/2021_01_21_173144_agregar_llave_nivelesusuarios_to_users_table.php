@@ -17,7 +17,7 @@ class AgregarLlaveNivelesusuariosToUsersTable extends Migration
             $table->bigInteger('level_id');
             $table->foreign('level_id')->references('id')->on('levels')
             ->onDelete('cascade')
-            ->onUpdate('cascade')->after('password');
+            ->onUpdate('cascade');
         });
     }
 
